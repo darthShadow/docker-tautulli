@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bash
+
+# permissions
+find /app /config \! \( -uid $(id -u abc) -gid $(id -g abc) \) -print0 | xargs -0r chown abc:abc
